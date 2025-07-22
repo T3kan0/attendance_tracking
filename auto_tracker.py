@@ -68,7 +68,7 @@ st.sidebar.markdown("""
     display: flex;
     align-items: center;
 }
-.sidebar-header h3 span {
+.sidebar-header h2 span {
     margin-right: 8px;
 }
 .sidebar-header p {
@@ -80,7 +80,7 @@ st.sidebar.markdown("""
 </style>
 
 <div class="sidebar-header">
-    <h3><span>📁</span> Upload Data Files</h3>
+    <h2><span>📁</span> Upload Data Files</h2>
 </div>
 """, unsafe_allow_html=True)
 
