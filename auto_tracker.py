@@ -54,7 +54,7 @@ st.markdown("""
 st.sidebar.markdown("""
 <style>
 .sidebar-header {
-    background-color: #f5f7fa;
+    background-color: white;
     padding: 15px;
     margin-bottom: 10px;
     border-left: 5px solid #004080;
