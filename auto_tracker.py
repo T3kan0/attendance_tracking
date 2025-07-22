@@ -80,7 +80,7 @@ st.sidebar.markdown("""
 </style>
 
 <div class="sidebar-header">
-    <h2><span>📁</span> Monitoring the A_STEP Data Flow</h2>
+    <h2>Monitoring the A_STEP Data Flow</h2>
 </div>
 """, unsafe_allow_html=True)
 
