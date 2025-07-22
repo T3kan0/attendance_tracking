@@ -1,5 +1,4 @@
 pandas
 plotly
-dateutil
-re
-datetime
+python-dateutil
+
