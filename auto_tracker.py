@@ -315,29 +315,24 @@ if df1_file and df2_file:
         border-left: 8px solid purple;
         border-radius: 5px;
         box-shadow: 0 5px 9px rgba(0,0,0,0.1);
+        text-align: center;
     }
-    .sidebar-header h2 {
+
+    .sidebar-header h3 {
         font-size: 16px;
         color: purple;
         margin: 0;
         display: flex;
         align-items: center;
-    }
-    .sidebar-header h3 span {
-        margin-right: 8px;
-    }
-    .sidebar-header p {
-        font-size: 13px;
-        color: #555;
-        margin-top: 5px;
-        margin-bottom: 0;
+        justify-content: center;
     }
     </style>
 
     <div class="sidebar-header">
-        <h2>🏫 Campus-wise Upload Summary</h2> 
+        <h3>🏫 Campus-wise Upload Summary</h3> 
     </div>
     """, unsafe_allow_html=True)
+
     
     
     
