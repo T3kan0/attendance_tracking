@@ -23,7 +23,7 @@ st.markdown("""
     background: linear-gradient(to right, #6a0572, #ab83a1);
     padding: 25px 20px;
     border-radius: 12px;
-    border: 2px solid white;
+    border: 2px solid red;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     text-align: center;
     color: white;
