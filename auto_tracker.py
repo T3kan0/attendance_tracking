@@ -57,7 +57,7 @@ st.sidebar.markdown("""
     background-color: white;
     padding: 15px;
     margin-bottom: 10px;
-    border-left: 5px solid purple;
+    border-left: 8px solid purple;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
