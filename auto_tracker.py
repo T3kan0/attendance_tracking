@@ -305,44 +305,7 @@ if df1_file and df2_file:
     # Center the title
     fig.update_layout(title_x=0.25)
     st.plotly_chart(fig, use_container_width=True)
-    
-    st.markdown("""
-    <style>
-    /* Optional: widen sidebar container by reducing Streamlit default padding */
-    section[data-testid="stSidebar"] > div:first-child {
-        padding: 10px 5px 10px 5px;
-    }
-
-    /* Header box */
-    .sidebar-header {
-        background-color: white;
-        padding: 20px;
-        margin-bottom: 15px;
-        border-left: 8px solid purple;
-        border-radius: 6px;
-        box-shadow: 0 5px 9px rgba(0,0,0,0.1);
-        text-align: center;
-        width: 100%;
-    }
-
-    /* Header text */
-    .sidebar-header h2 {
-        font-size: 18px;
-        color: purple;
-        margin: 0;
-        font-weight: 700;
-    }
-    </style>
-
-    <div class="sidebar-header">
-        <h2>🏫 Campus-wise Upload Summary</h2> 
-    </div>
-    """, unsafe_allow_html=True)
-
-
-
-
-    
+     
     
     
     # 🔍 CAMPUS-WISE METRICS
@@ -374,7 +337,7 @@ if df1_file and df2_file:
     st.markdown('---')
 
     # DAILY MATCH TABLE
-    st.markdown("<h3 style='text-align: center;'>📅 Daily Match Rates</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #800080; center;'>📅 Daily Match Rates</h3>", unsafe_allow_html=True)
 
     st.dataframe(merged.style.format({"Match %": "{:.2f}%"})
                          .background_gradient(subset=["Match %"], cmap="RdYlGn"), use_container_width=True)
