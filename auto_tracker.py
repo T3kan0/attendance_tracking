@@ -84,7 +84,7 @@ st.sidebar.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.sidebar.markdown("""
+st.markdown("""
 <style>
 .upload-box {
     padding: 15px;
@@ -97,16 +97,21 @@ st.sidebar.markdown("""
 .upload-box h4 {
     margin: 0;
     font-size: 15px;
-    color: #800080;
+    color: white;  /* use white for contrast on purple */
 }
 .upload-box p {
     font-size: 13px;
-    color: #800080;
+    color: white;
     margin-top: 5px;
 }
 </style>
+""", unsafe_allow_html=True)
 
-st.sidebar.markdown('<h4 style="color:#800080;">📤 OneDrive Data (df1) 📤</h4>', unsafe_allow_html=True)
+st.sidebar.markdown("""
+<div class="upload-box">
+    <h4>📤 OneDrive Data (df1) 📤</h4>
+</div>
+""", unsafe_allow_html=True)
 
 df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
