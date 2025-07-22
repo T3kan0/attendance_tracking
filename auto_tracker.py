@@ -142,7 +142,7 @@ st.sidebar.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-df2_file = st.sidebar.file_uploader("", type=["csv"])
+df2_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
 if df1_file and df2_file:
     df1 = pd.read_csv(df1_file)
