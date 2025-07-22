@@ -51,7 +51,6 @@ st.markdown("""
 
 
 # Sidebar file upload
-st.sidebar.header("📁 Upload Data Files")
 st.sidebar.markdown("""
 <style>
 .sidebar-header {
@@ -78,6 +77,10 @@ st.sidebar.markdown("""
     <h3><span>📁</span> Upload Data Files</h3>
 </div>
 """, unsafe_allow_html=True)
+
+<p style="font-size:13px;color:#555;margin-top:5px;">
+    Upload your CSV or Excel files to begin data ingestion.
+</p>
 
 
 df1_file = st.sidebar.file_uploader("OneDrive Data (df1)", type=["csv"])
