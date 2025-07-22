@@ -318,7 +318,7 @@ if df1_file and df2_file:
         text-align: center;
     }
 
-    .sidebar-header h3 {
+    .sidebar-header h2 {
         font-size: 16px;
         color: purple;
         margin: 0;
@@ -329,7 +329,7 @@ if df1_file and df2_file:
     </style>
 
     <div class="sidebar-header">
-        <h3>🏫 Campus-wise Upload Summary</h3> 
+        <h2>🏫 Campus-wise Upload Summary</h2> 
     </div>
     """, unsafe_allow_html=True)
 
