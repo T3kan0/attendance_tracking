@@ -337,7 +337,7 @@ if df1_file and df2_file:
     st.markdown('---')
 
     # DAILY MATCH TABLE
-    st.markdown("<h3 style='text-align: center; color: #800080; center;'>📅 Daily Match Rates</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>📅 Daily Match Rates</h3>", unsafe_allow_html=True)
 
     st.dataframe(merged.style.format({"Match %": "{:.2f}%"})
                          .background_gradient(subset=["Match %"], cmap="RdYlGn"), use_container_width=True)
