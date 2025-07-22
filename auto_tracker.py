@@ -256,7 +256,7 @@ if df1_file and df2_file:
     col3.metric(
         label="Total Match Rate",
         value=f"{match_percent:.2f}%",
-        delta="90"  # Optional
+        delta="None"  # Optional
     )
     
     
