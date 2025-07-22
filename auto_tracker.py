@@ -61,14 +61,14 @@ st.sidebar.markdown("""
     border-radius: 5px;
     box-shadow: 0 5px 9px rgba(0,0,0,0.1);
 }
-.sidebar-header h3 {
+.sidebar-header h2 {
     font-size: 16px;
     color: purple;
     margin: 0;
     display: flex;
     align-items: center;
 }
-.sidebar-header h2 span {
+.sidebar-header h3 span {
     margin-right: 8px;
 }
 .sidebar-header p {
