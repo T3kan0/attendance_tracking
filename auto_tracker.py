@@ -15,7 +15,7 @@ import re
 from datetime import datetime
 
 st.set_page_config(layout="wide")
-#st.markdown("![Alt Text](https://i.postimg.cc/nzrdMSK6/linegraph.jpg)")
+#st.markdown("![Alt Text](https://i.postimg.cc/zX2TGD2X/linegraph.png)")
 
 st.markdown("""
 <style>
@@ -25,20 +25,21 @@ st.markdown("""
     border-radius: 12px;
     border: 2px solid red;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    text-align: center;
     color: white;
     margin-bottom: 30px;
 }
 
 .ingestion-header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .ingestion-header-text {
-    max-width: 70%;
+    text-align: center;
+    flex: 1;
 }
 
 .ingestion-header-text h1 {
@@ -56,8 +57,11 @@ st.markdown("""
 }
 
 .ingestion-header img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     max-height: 70px;
-    margin-left: 20px;
 }
 </style>
 
@@ -71,6 +75,7 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
