@@ -91,13 +91,13 @@ st.markdown("""
     margin-top: 10px;
     margin-bottom: 20px;
     background-color: #a569bd;
-    border: 1px dashed #007acc;
+    border: 3px dashed #007acc;
     border-radius: 6px;
 }
 .upload-box h4 {
     margin: 0;
     font-size: 15px;
-    color: black;
+    color: white;
 }
 .upload-box p {
     font-size: 13px;
