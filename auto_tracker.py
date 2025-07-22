@@ -305,6 +305,42 @@ if df1_file and df2_file:
     # Center the title
     fig.update_layout(title_x=0.25)
     st.plotly_chart(fig, use_container_width=True)
+    
+    st.sidebar.markdown("""
+    <style>
+    .sidebar-header {
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-left: 8px solid purple;
+        border-radius: 5px;
+        box-shadow: 0 5px 9px rgba(0,0,0,0.1);
+    }
+    .sidebar-header h2 {
+        font-size: 16px;
+        color: purple;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .sidebar-header h3 span {
+        margin-right: 8px;
+    }
+    .sidebar-header p {
+        font-size: 13px;
+        color: #555;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+    </style>
+
+    <div class="sidebar-header">
+        <h2>🏫 Campus-wise Upload Summary</h2> 
+    </div>
+    """, unsafe_allow_html=True)
+    
+    
+    
     # 🔍 CAMPUS-WISE METRICS
     st.markdown("<h3 style='text-align: center;'>🏫 Campus-wise Upload Summary</h3>", unsafe_allow_html=True)
 
