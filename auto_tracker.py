@@ -25,6 +25,62 @@ st.markdown("""
     border-radius: 12px;
     border: 2px solid red;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.ingestion-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ingestion-header-text {
+    max-width: 70%;
+}
+
+.ingestion-header-text h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ingestion-header-text p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #fcefee;
+    font-style: italic;
+}
+
+.ingestion-header img {
+    max-height: 70px;
+    margin-left: 20px;
+}
+</style>
+
+<div class="ingestion-header">
+    <div class="ingestion-header-content">
+        <div class="ingestion-header-text">
+            <h1>A_STEP Data Ingestion Tracker</h1>
+            <p>Monitoring data flow, completeness, and consistency — in real-time</p>
+        </div>
+        <img src="https://i.postimg.cc/nzrdMSK6/linegraph.jpg" alt="Tracker Logo">
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+
+
+st.markdown("""
+<style>
+.ingestion-header {
+    background: linear-gradient(to right, #6a0572, #ab83a1);
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 2px solid red;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     text-align: center;
     color: white;
     margin-bottom: 30px;
