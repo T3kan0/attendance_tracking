@@ -243,7 +243,9 @@ if df1_file and df2_file:
     merged['PeopleSoft Count'] = pd.to_numeric(merged['PeopleSoft Count'], errors='coerce').fillna(0).astype(int)
 
     # OVERVIEW
-    st.markdown("<h3 style='text-align: center;'>📊 Overview</h3>", unsafe_allow_html=True)
+    #st.markdown("<h3 style='text-align: center;'>📊 Overview</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #800080;'>📊 Overview</h3>", unsafe_allow_html=True)
+ 
     st.markdown("""
         <h3 style='
         text-align: center;
