@@ -52,6 +52,32 @@ st.markdown("""
 
 # Sidebar file upload
 st.sidebar.header("📁 Upload Data Files")
+st.sidebar.markdown("""
+<style>
+.sidebar-header {
+    background-color: #f5f7fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #004080;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.sidebar-header h3 {
+    font-size: 16px;
+    color: #004080;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.sidebar-header h3 span {
+    margin-right: 8px;
+}
+</style>
+
+<div class="sidebar-header">
+    <h3><span>📁</span> Upload Data Files</h3>
+</div>
+""", unsafe_allow_html=True)
 
 
 df1_file = st.sidebar.file_uploader("OneDrive Data (df1)", type=["csv"])
