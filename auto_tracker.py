@@ -63,7 +63,7 @@ st.sidebar.markdown("""
 }
 .sidebar-header h3 {
     font-size: 16px;
-    color: #004080;
+    color: red;
     margin: 0;
     display: flex;
     align-items: center;
