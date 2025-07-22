@@ -101,7 +101,7 @@ st.sidebar.markdown("""
 }
 .upload-box p {
     font-size: 13px;
-    color: #333;
+    color: purple;
     margin-top: 5px;
 }
 </style>
