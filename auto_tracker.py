@@ -244,6 +244,17 @@ if df1_file and df2_file:
 
     # OVERVIEW
     st.markdown("<h3 style='text-align: center;'>📊 Overview</h3>", unsafe_allow_html=True)
+    st.markdown("""
+        <h3 style='
+        text-align: center;
+        color: #fff;
+        background-color: #800080;
+        padding: 10px;
+        border-radius: 8px;
+    '>
+    📊 Overview
+    </h3>
+    """, unsafe_allow_html=True)
 
     total_uploaded = len(df3)
     total_ingested = len(df2)
