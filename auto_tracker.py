@@ -16,12 +16,14 @@ from datetime import datetime
 
 st.set_page_config(layout="wide")
 #st.markdown("![Alt Text](https://i.postimg.cc/yNn12Vj9/header.png)")
+
 st.markdown("""
 <style>
 .ingestion-header {
     background: linear-gradient(to right, #6a0572, #ab83a1);
     padding: 25px 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 2px solid white;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     text-align: center;
     color: white;
@@ -46,8 +48,6 @@ st.markdown("""
     <p>Monitoring data flow, completeness, and consistency — in real-time</p>
 </div>
 """, unsafe_allow_html=True)
-
-
 
 
 # Sidebar file upload
