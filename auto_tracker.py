@@ -97,7 +97,7 @@ st.markdown("""
 .upload-box h4 {
     margin: 0;
     font-size: 15px;
-    color: white;
+    color: black;
 }
 .upload-box p {
     font-size: 13px;
@@ -138,7 +138,7 @@ st.sidebar.markdown("""
 </style>
 
 <div class="upload-box">
-    <h4>📤 PeopleSoft Data (df2)</h4>
+    <h4>📤 PeopleSoft Data (df2) 📤</h4>
 </div>
 """, unsafe_allow_html=True)
 
