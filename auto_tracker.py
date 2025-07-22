@@ -107,7 +107,6 @@ st.sidebar.markdown("""
 
 <div class="upload-box">
     <h4>📤 OneDrive Data (df1)</h4>
-    <p>Please upload the exported CSV file from OneDrive for ingestion comparison.</p>
 </div>
 """, unsafe_allow_html=True)
 
