@@ -16,6 +16,39 @@ from datetime import datetime
 
 st.set_page_config(layout="wide")
 st.markdown("![Alt Text](https://i.postimg.cc/yNn12Vj9/header.png)")
+st.markdown("""
+<style>
+.ingestion-header {
+    background: linear-gradient(to right, #6a0572, #ab83a1);
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.ingestion-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.ingestion-header p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #fcefee;
+    font-style: italic;
+}
+</style>
+
+<div class="ingestion-header">
+    <h1>A_STEP Data Ingestion Tracker</h1>
+    <p>Monitoring data flow, completeness, and consistency — in real-time</p>
+</div>
+""", unsafe_allow_html=True)
+
+
+
 
 # Sidebar file upload
 st.sidebar.header("📁 Upload Data Files")
