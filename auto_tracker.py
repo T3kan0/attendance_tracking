@@ -25,6 +25,7 @@ st.markdown("""
     border-radius: 12px;
     border: 2px solid red;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
     color: white;
     margin-bottom: 30px;
 }
