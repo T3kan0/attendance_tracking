@@ -308,23 +308,29 @@ if df1_file and df2_file:
     
     st.markdown("""
     <style>
-    .sidebar-header {
-        background-color: white;
-        padding: 15px;
-        margin-bottom: 10px;
-        border-left: 8px solid purple;
-        border-radius: 5px;
-        box-shadow: 0 5px 9px rgba(0,0,0,0.1);
-        text-align: center;
+    /* Optional: widen sidebar container by reducing Streamlit default padding */
+    section[data-testid="stSidebar"] > div:first-child {
+        padding: 10px 5px 10px 5px;
     }
 
+    /* Header box */
+    .sidebar-header {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-left: 8px solid purple;
+        border-radius: 6px;
+        box-shadow: 0 5px 9px rgba(0,0,0,0.1);
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Header text */
     .sidebar-header h2 {
-        font-size: 16px;
+        font-size: 18px;
         color: purple;
         margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-weight: 700;
     }
     </style>
 
@@ -332,6 +338,9 @@ if df1_file and df2_file:
         <h2>🏫 Campus-wise Upload Summary</h2> 
     </div>
     """, unsafe_allow_html=True)
+
+
+
 
     
     
