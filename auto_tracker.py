@@ -15,7 +15,7 @@ import re
 from datetime import datetime
 
 st.set_page_config(layout="wide")
-st.markdown("![Alt Text](https://i.postimg.cc/yNn12Vj9/header.png)")
+#st.markdown("![Alt Text](https://i.postimg.cc/yNn12Vj9/header.png)")
 st.markdown("""
 <style>
 .ingestion-header {
