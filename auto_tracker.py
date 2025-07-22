@@ -83,6 +83,7 @@ st.sidebar.markdown("""
     <h3><span>📁</span> Upload Data Files</h3>
 </div>
 """, unsafe_allow_html=True)
+
 st.sidebar.markdown("""
 <style>
 .upload-box {
@@ -112,8 +113,33 @@ st.sidebar.markdown("""
 
 df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
+st.sidebar.markdown("""
+<style>
+.upload-box {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #f0f4f8;
+    border: 1px dashed #007acc;
+    border-radius: 6px;
+}
+.upload-box h4 {
+    margin: 0;
+    font-size: 15px;
+    color: #004080;
+}
+.upload-box p {
+    font-size: 13px;
+    color: #333;
+    margin-top: 5px;
+}
+</style>
 
-#df1_file = st.sidebar.file_uploader("OneDrive Data (df1)", type=["csv"])
+<div class="upload-box">
+    <h4>📤 PeopleSoft Data (df2)</h4>
+</div>
+""", unsafe_allow_html=True)
+
 df2_file = st.sidebar.file_uploader("PeopleSoft Data (df2)", type=["csv"])
 
 if df1_file and df2_file:
