@@ -106,10 +106,7 @@ st.sidebar.markdown("""
 }
 </style>
 
-<div class="upload-box">
-    <h4>📤 OneDrive Data (df1) 📤</h4>
-</div>
-""", unsafe_allow_html=True)
+st.sidebar.markdown('<h4 style="color:#800080;">📤 OneDrive Data (df1) 📤</h4>', unsafe_allow_html=True)
 
 df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
