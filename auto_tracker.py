@@ -306,7 +306,7 @@ if df1_file and df2_file:
     fig.update_layout(title_x=0.25)
     st.plotly_chart(fig, use_container_width=True)
     
-    st.sidebar.markdown("""
+    st.markdown("""
     <style>
     .sidebar-header {
         background-color: white;
