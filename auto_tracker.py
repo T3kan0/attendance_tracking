@@ -90,18 +90,18 @@ st.sidebar.markdown("""
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: purple;
+    background-color: #800080;
     border: 1px dashed #007acc;
     border-radius: 6px;
 }
 .upload-box h4 {
     margin: 0;
     font-size: 15px;
-    color: purple;
+    color: #800080;
 }
 .upload-box p {
     font-size: 13px;
-    color: purple;
+    color: #800080;
     margin-top: 5px;
 }
 </style>
