@@ -66,7 +66,7 @@ st.markdown("""
             <h1>A_STEP Data Ingestion Tracker</h1>
             <p>Monitoring data flow, completeness, and consistency — in real-time</p>
         </div>
-        <img src="https://i.postimg.cc/nzrdMSK6/linegraph.jpg" alt="Tracker Logo">
+        <img src="https://i.postimg.cc/fLd8xtFK/linegraph.png" alt="Tracker Logo">
     </div>
 </div>
 """, unsafe_allow_html=True)
