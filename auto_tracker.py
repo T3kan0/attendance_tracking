@@ -97,7 +97,7 @@ st.markdown("""
 .upload-box h4 {
     margin: 0;
     font-size: 15px;
-    color: darkblue;
+    color: white;
 }
 .upload-box p {
     font-size: 13px;
