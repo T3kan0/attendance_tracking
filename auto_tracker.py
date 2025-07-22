@@ -107,7 +107,7 @@ st.sidebar.markdown("""
 </style>
 
 <div class="upload-box">
-    <h4>📤 OneDrive Data (df1)</h4>
+    <h4>📤 OneDrive Data (df1) 📤</h4>
 </div>
 """, unsafe_allow_html=True)
 
