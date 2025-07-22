@@ -97,7 +97,7 @@ st.sidebar.markdown("""
 .upload-box h4 {
     margin: 0;
     font-size: 15px;
-    color: #004080;
+    color: purple;
 }
 .upload-box p {
     font-size: 13px;
