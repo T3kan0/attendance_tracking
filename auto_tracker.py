@@ -81,7 +81,6 @@ st.sidebar.markdown("""
 
 <div class="sidebar-header">
     <h3><span>📁</span> Upload Data Files</h3>
-    <p>Select your CSV or Excel files to track uploaded vs. ingested data.</p>
 </div>
 """, unsafe_allow_html=True)
 
