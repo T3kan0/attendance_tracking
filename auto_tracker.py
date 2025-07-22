@@ -243,7 +243,6 @@ if df1_file and df2_file:
     merged['PeopleSoft Count'] = pd.to_numeric(merged['PeopleSoft Count'], errors='coerce').fillna(0).astype(int)
 
     # OVERVIEW
-    #st.markdown("<h3 style='text-align: center;'>📊 Overview</h3>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; color: #800080;'>📊 Overview</h3>", unsafe_allow_html=True)
  
 
@@ -254,7 +253,14 @@ if df1_file and df2_file:
     col1, col2, col3 = st.columns(3)
     col1.metric("OneDrive Attendance (df1)", total_uploaded)
     col2.metric("PeopleSof Attendance (df2)", total_ingested)    
-    col3.metric("Total Match Rate", f"{match_percent:.2f}%", delta=None)
+    col3.metric(
+        label="Total Match Rate",
+        value=f"{match_percent:.2f}%",
+        delta=f"{match_percent - prev_match_percent:.2f}%"  # Optional
+    )
+    
+    
+    #col3.metric("Total Match Rate", f"{match_percent:.2f}%", delta=None)
 
     st.progress(min(match_percent / 100, 1.0))
     #st.markdown('---')
