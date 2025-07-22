@@ -337,7 +337,7 @@ if df1_file and df2_file:
     st.markdown('---')
 
     # DAILY MATCH TABLE
-    st.markdown("<h3 style='text-align: center;'>📅 Daily Match Rates</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #800080;'>📅 Daily Match Rates</h3>", unsafe_allow_html=True)
 
     st.dataframe(merged.style.format({"Match %": "{:.2f}%"})
                          .background_gradient(subset=["Match %"], cmap="RdYlGn"), use_container_width=True)
@@ -346,7 +346,7 @@ if df1_file and df2_file:
     # ZERO DB ATTENDANCE
     #st.subheader("❌ Dates with No Database Records")
     # Header
-    st.markdown("<h3 style='text-align: center;'>❌ Dates with No Database Records</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #800080;'>❌ Dates with No Database Records</h3>", unsafe_allow_html=True)
 
     # --- Define the merge keys ---
     # These are the columns used to determine if a row in df1 has a match in df2
