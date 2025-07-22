@@ -21,8 +21,8 @@ st.markdown("![Alt Text](https://i.postimg.cc/yNn12Vj9/header.png)")
 st.sidebar.header("📁 Upload Data Files")
 
 
-df1_file = st.sidebar.file_uploader("Upload OneDrive Data (df1 - OneDrive)", type=["csv"])
-df2_file = st.sidebar.file_uploader("Upload PeopleSoft Data (df2 - PeopleSoft)", type=["csv"])
+df1_file = st.sidebar.file_uploader("OneDrive Data (df1)", type=["csv"])
+df2_file = st.sidebar.file_uploader("PeopleSoft Data (df2)", type=["csv"])
 
 if df1_file and df2_file:
     df1 = pd.read_csv(df1_file)
