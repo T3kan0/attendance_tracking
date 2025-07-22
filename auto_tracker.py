@@ -59,7 +59,7 @@ st.sidebar.markdown("""
     margin-bottom: 10px;
     border-left: 8px solid purple;
     border-radius: 5px;
-    box-shadow: 1 3px 6px rgba(0,0,0,0.1);
+    box-shadow: -1 3px 6px rgba(0,0,0,0.1);
 }
 .sidebar-header h3 {
     font-size: 16px;
