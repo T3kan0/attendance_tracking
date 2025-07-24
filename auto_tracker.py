@@ -148,6 +148,7 @@ with c1:
     df1_file = st.file_uploader("", type=["csv"], label_visibility="collapsed")
 
 with c2:
+    st.write('PeopleSoft Data: df2')    
     df2_file = st.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
 
