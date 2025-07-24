@@ -148,7 +148,7 @@ with c1:
     df1_file = st.file_uploader("", type=["csv"], label_visibility="collapsed")
 
 with c2:
-    st.write('PeopleSoft Data: df2')    
+    st.markdown("<h6 style='text-align: center;'> PeopleSoft Data (df2) </h6>", unsafe_allow_html=True)    
     df2_file = st.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
 
