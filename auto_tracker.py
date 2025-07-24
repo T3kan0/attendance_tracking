@@ -241,7 +241,7 @@ if df1_file and df2_file:
     #col3.metric("Total Match Rate", f"{match_percent:.2f}%", delta=None)
 
     st.progress(min(match_percent / 100, 1.0))
-    #st.markdown('---')
+    st.markdown("<h3 style='text-align: center; color: #2471a3;'>📊 Daily Attendance Trends</h3>", unsafe_allow_html=True)
 
     # LINE PLOT (DAILY)
     #st.subheader("📈 Daily Attendance Comparison")
