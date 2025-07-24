@@ -114,22 +114,23 @@ st.sidebar.markdown("""
 st.markdown("""
 <style>
 .upload-box {
-    padding: 15px;
+    padding: 8px 15px;  /* Less vertical padding */
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;  /* Reduced bottom margin */
     background-color: #a569bd;
     border: 3px dashed #ff5733;
     border-radius: 6px;
 }
 .upload-box h4 {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
     color: white;
+    line-height: 1.2;  /* Tighter line spacing */
 }
 .upload-box p {
-    font-size: 13px;
+    font-size: 12px;
     color: white;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -139,6 +140,7 @@ st.sidebar.markdown("""
     <h4>📤 OneDrive Data (df1) 📤</h4>
 </div>
 """, unsafe_allow_html=True)
+
 
 df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
