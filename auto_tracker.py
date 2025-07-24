@@ -168,7 +168,7 @@ st.sidebar.markdown("""
 </style>
 
 <div class="upload-box">
-    <h4>⬇️ ⬇️ PeopleSoft Data (df2) ⬇️ ⬇️ </h4>
+    <h4> ⬇️ PeopleSoft Data (df2) ⬇️ </h4>
 </div>
 """, unsafe_allow_html=True)
 
