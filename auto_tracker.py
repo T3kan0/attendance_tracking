@@ -111,36 +111,6 @@ st.sidebar.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<style>
-.upload-box {
-    padding: 5px 15px;  /* Less vertical padding */
-    margin-top: 5px;
-    margin-bottom: 10px;  /* Reduced bottom margin */
-    background-color: #a569bd;
-    border: 3px solid white;
-    border-radius: 6px;
-}
-.upload-box h4 {
-    margin: 0;
-    font-size: 14px;
-    color: white;
-    line-height: 1.2;  /* Tighter line spacing */
-}
-.upload-box p {
-    font-size: 12px;
-    color: white;
-    margin-top: 3px;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.sidebar.markdown("""
-<div class="upload-box">
-    <h4>⬇️ ⬇️ OneDrive Data (df1) ⬇️ ⬇️ </h4>
-</div>
-""", unsafe_allow_html=True)
-
 c1, c2 = st.columns(2)
 
 with c1:
@@ -151,38 +121,6 @@ with c2:
     st.markdown("<h6 style='text-align: center; color: #800080;'> PeopleSoft Data (df2) </h6>", unsafe_allow_html=True)    
     df2_file = st.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
-
-df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
-
-st.sidebar.markdown("""
-<style>
-.upload-box {
-    padding: 5px 15px;  /* Less vertical padding */
-    margin-top: 5px;
-    margin-bottom: 10px;  /* Reduced bottom margin */
-    background-color: #a569bd;
-    border: 3px solid white;
-    border-radius: 6px;
-}
-.upload-box h4 {
-    margin: 0;
-    font-size: 14px;
-    color: white;
-    line-height: 1.2;  /* Tighter line spacing */
-}
-.upload-box p {
-    font-size: 13px;
-    color: #333;
-    margin-top: 5px;
-}
-</style>
-
-<div class="upload-box">
-    <h4> ⬇️ PeopleSoft Data (df2) ⬇️ </h4>
-</div>
-""", unsafe_allow_html=True)
-
-df2_file = st.sidebar.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
 if df1_file and df2_file:
     df1 = pd.read_csv(df1_file)
