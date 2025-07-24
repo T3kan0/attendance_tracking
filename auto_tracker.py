@@ -260,7 +260,7 @@ if df1_file and df2_file:
     
     
     # 🔍 CAMPUS-WISE METRICS
-    st.markdown("<h3 style='text-align: center; color: #800080;'>🏫 Campus-wise Upload Summary</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #3498db;'>🏫 Campus-wise Upload Summary</h3>", unsafe_allow_html=True)
 
 
     # Normalize CAMPUS column casing
