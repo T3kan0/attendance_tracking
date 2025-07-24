@@ -147,11 +147,11 @@ df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapse
 st.sidebar.markdown("""
 <style>
 .upload-box {
-    padding: 15px;
+    padding: 5px 15px;  /* Less vertical padding */
     margin-top: 5px;
-    margin-bottom: 20px;
-    background-color: #f0f4f8;
-    border: 1px dashed #007acc;
+    margin-bottom: 10px;  /* Reduced bottom margin */
+    background-color: #a569bd;
+    border: 3px dashed #ff5733;
     border-radius: 6px;
 }
 .upload-box h4 {
