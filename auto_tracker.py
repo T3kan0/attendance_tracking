@@ -141,6 +141,8 @@ st.sidebar.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+c1, c2 = st.columns(2)
+
 with c1:
     df1_file = st.file_uploader("", type=["csv"], label_visibility="collapsed")
 
