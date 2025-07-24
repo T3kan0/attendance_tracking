@@ -118,7 +118,7 @@ st.markdown("""
     margin-top: 5px;
     margin-bottom: 20px;
     background-color: #a569bd;
-    border: 3px dashed #007acc;
+    border: 3px dashed #ff5733;
     border-radius: 6px;
 }
 .upload-box h4 {
