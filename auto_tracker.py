@@ -146,7 +146,7 @@ st.sidebar.markdown("""
 <style>
 .upload-box {
     padding: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 20px;
     background-color: #f0f4f8;
     border: 1px dashed #007acc;
