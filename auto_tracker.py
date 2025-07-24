@@ -221,7 +221,7 @@ if df1_file and df2_file:
     merged['PeopleSoft Count'] = pd.to_numeric(merged['PeopleSoft Count'], errors='coerce').fillna(0).astype(int)
 
     # OVERVIEW
-    st.markdown("<h3 style='text-align: center; color: #3498db;'>📊 Overview</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #2471a3;'>📊 Overview</h3>", unsafe_allow_html=True)
  
 
     total_uploaded = len(df3)
@@ -260,7 +260,7 @@ if df1_file and df2_file:
     
     
     # 🔍 CAMPUS-WISE METRICS
-    st.markdown("<h3 style='text-align: center; color: #3498db;'>🏫 Campus-wise Upload Summary</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #2471a3;'>🏫 Campus-wise Upload Summary</h3>", unsafe_allow_html=True)
 
 
     # Normalize CAMPUS column casing
@@ -297,7 +297,7 @@ if df1_file and df2_file:
     # ZERO DB ATTENDANCE
     #st.subheader("❌ Dates with No Database Records")
     # Header
-    st.markdown("<h3 style='text-align: center; color: #800080;'>❌ Dates with No Database Records</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #2471a3;'>❌ Dates with No Database Records</h3>", unsafe_allow_html=True)
 
     # --- Define the merge keys ---
     # These are the columns used to determine if a row in df1 has a match in df2
