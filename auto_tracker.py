@@ -144,11 +144,11 @@ st.sidebar.markdown("""
 c1, c2 = st.columns(2)
 
 with c1:
-    st.markdown("<h6 style='text-align: center;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
+    st.markdown("<h6 style='text-align: center; color: #800080;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
     df1_file = st.file_uploader("", type=["csv"], label_visibility="collapsed")
 
 with c2:
-    st.markdown("<h6 style='text-align: center;'> PeopleSoft Data (df2) </h6>", unsafe_allow_html=True)    
+    st.markdown("<h6 style='text-align: center; color: #800080;'> PeopleSoft Data (df2) </h6>", unsafe_allow_html=True)    
     df2_file = st.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
 
