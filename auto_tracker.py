@@ -144,7 +144,7 @@ st.sidebar.markdown("""
 c1, c2 = st.columns(2)
 
 with c1:
-    st.write('OneDrive Data: df1')
+    st.markdown("<h5 style='text-align: center;'>📤 OneDrive Data: df1</h5>", unsafe_allow_html=True)
     df1_file = st.file_uploader("", type=["csv"], label_visibility="collapsed")
 
 with c2:
