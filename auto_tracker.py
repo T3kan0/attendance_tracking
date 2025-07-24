@@ -251,7 +251,7 @@ if df1_file and df2_file:
         y=['OneDrive Count', 'PeopleSoft Count'],
         markers=True,
         labels={'value': 'Attendance', 'Date': 'Date'},
-        #title="Daily Attendance: OneDrive vs. PeopleSoft"
+        title=" "
     )
     # Center the title
     fig.update_layout(title_x=0.25)
