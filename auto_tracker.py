@@ -389,23 +389,15 @@ if df1_file and df2_file:
             return pd.DataFrame(results)
 
         match_results = fuzzy_match_modules(df1_not_in_df2, db)
-        st.subheader("🧠 Fuzzy Match Results")
 
-        if not match_results.empty:
-            st.write("Columns in match_results:", match_results.columns.tolist())  # Debug
+        st.dataframe(
+            match_results.sort_values("Match Score", ascending=False)
+            .style.format({"Match Score": "{:.2f}%"})
+            .background_gradient(subset=["Match Score"], cmap="RdYlGn"),
+            use_container_width=True
+        )
 
-            if 'Similarity Score (%)' in match_results.columns:
-                styled_results = match_results.style.background_gradient(
-                subset=['Similarity Score (%)'],
-                cmap='Blues'
-            ).format({'Similarity Score (%)': '{:.1f}%'})
 
-                st.dataframe(styled_results, use_container_width=True)
-            else:
-                st.warning("⚠️ Column 'Similarity Score (%)' not found in match_results.")
-                st.dataframe(match_results, use_container_width=True)
-        else:
-            st.info("No fuzzy matches found.")
 
         
 #        st.subheader("🔍 Fuzzy Matched Modules (from missing data to DB)")
