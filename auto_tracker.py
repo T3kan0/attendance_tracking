@@ -356,5 +356,7 @@ if df1_file and df2_file:
     print("\nEntries in df1 that are NOT in df2 (df1_not_in_df2):\n", df1_not_in_df2)
     if not df1_not_in_df2.empty:
         st.dataframe(df1_not_in_df2, use_container_width=True)
+        df1_not_in_df2['Module Code'] = df1_not_in_df2['MODULE'].astype(str).str.strip() + df1_not_in_df2['CODE'].astype(str).str.strip()
+
     else:
         st.success("✅ All records in df1 exist in df2.")
