@@ -15,8 +15,21 @@ import re
 from datetime import datetime
 from sqlalchemy import create_engine
 
+
 st.set_page_config(layout="wide")
 #st.markdown("![Alt Text](https://i.postimg.cc/zX2TGD2X/linegraph.png)")
+
+# Load credentials from Streamlit secrets
+db_user = st.secrets["DB_USER"]
+db_pass = st.secrets["DB_PASS"]
+db_host = st.secrets["DB_HOST"]
+db_port = st.secrets["DB_PORT"]
+db_name = st.secrets["DB_NAME"]
+
+# Build the SQLAlchemy connection URL
+db_url = f"postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
+
+
 
 st.markdown("""
 <style>
