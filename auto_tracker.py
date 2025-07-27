@@ -358,5 +358,37 @@ if df1_file and df2_file:
         st.dataframe(df1_not_in_df2, use_container_width=True)
         df1_not_in_df2['Module Code'] = df1_not_in_df2['MODULE'].astype(str).str.strip() + df1_not_in_df2['CODE'].astype(str).str.strip()
 
+        @st.cache_data
+        def fuzzy_match_modules(missing_df, reference_df, threshold=80):
+            missing_modules = missing_df['Module Code'].dropna().unique()
+            reference_modules = reference_df['Module Code'].dropna().unique()
+
+            results = []
+
+            for module in missing_modules:
+                best_match, score, _ = process.extractOne(
+                    module,
+                    reference_modules,
+                    scorer=fuzz.token_sort_ratio
+                )
+
+                if score >= threshold:
+                    results.append({
+                        'Missing Module': module,
+                        'Possible Match in DB': best_match,
+                        'Match Score': score
+                    })
+                else:
+                        results.append({
+                        'Missing Module': module,
+                        'Possible Match in DB': None,
+                        'Match Score': score
+                    })
+
+            return pd.DataFrame(results)
+
+
+
+    
     else:
         st.success("✅ All records in df1 exist in df2.")
