@@ -417,6 +417,17 @@ if df1_file and df2_file:
 
             return pd.DataFrame(results)
 
-  
+        tutor_match_results = fuzzy_match_tutor_ids(df1_not_in_df2, db)
+
+        st.subheader("🧑‍🏫 Fuzzy Match: TUTOR EMPLID vs. SQL Database")
+
+        st.dataframe(
+            tutor_match_results.sort_values("Match Score", ascending=False)
+            .style.format({"Match Score": "{:.2f}%"})
+            .background_gradient(subset=["Match Score"], cmap="RdYlGn"),
+            use_container_width=True
+        )
+
+
     else:
         st.success("✅ All records in df1 exist in df2.")
