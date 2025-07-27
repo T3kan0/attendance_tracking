@@ -396,6 +396,27 @@ if df1_file and df2_file:
             .background_gradient(subset=["Match Score"], cmap="RdYlGn"),
             use_container_width=True
         )
-    
+
+        @st.cache_data
+        def fuzzy_match_tutor_ids(df_missing, db):
+            results = []
+
+            db_ids = db['Tutor Student ID'].astype(str).dropna().unique()
+
+            for tutor_id in df_missing['TUTOR EMPLID'].dropna().astype(str).unique():
+                match, score, _ = process.extractOne(
+                    query=tutor_id,
+                    choices=db_ids,
+                    scorer=fuzz.ratio
+                )
+                results.append({
+                    "TUTOR EMPLID (Missing)": tutor_id,
+                    "Closest Match in DB": match,
+                    "Match Score": score
+                })
+
+            return pd.DataFrame(results)
+
+  
     else:
         st.success("✅ All records in df1 exist in df2.")
