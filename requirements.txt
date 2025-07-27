@@ -6,3 +6,4 @@ matplotlib
 sqlalchemy
 psycopg2-binary
 rapidfuzz
+fuzzywuzzy
