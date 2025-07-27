@@ -3,3 +3,4 @@ plotly
 python-dateutil
 streamlit
 matplotlib
+sqlalchemy
