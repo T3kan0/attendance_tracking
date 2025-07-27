@@ -29,7 +29,17 @@ db_name = st.secrets["DB_NAME"]
 # Build the SQLAlchemy connection URL
 db_url = f"postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
 
+# Create the SQLAlchemy engine
+engine = create_engine(db_url)
 
+# Query the data
+@st.cache_data
+def load_data():
+    query = "SELECT * FROM attendance_db_rwnt;"
+    return pd.read_sql(query, engine)
+
+db = load_data()
+st.dataframe(db)
 
 st.markdown("""
 <style>
