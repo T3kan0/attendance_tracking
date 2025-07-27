@@ -39,7 +39,7 @@ def load_data():
     return pd.read_sql(query, engine)
 
 db = load_data()
-st.dataframe(db)
+#st.dataframe(db)
 
 st.markdown("""
 <style>
