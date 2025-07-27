@@ -389,9 +389,20 @@ if df1_file and df2_file:
             return pd.DataFrame(results)
 
         match_results = fuzzy_match_modules(df1_not_in_df2, db)
+        st.subheader("🧠 Fuzzy Match Results")
 
-        st.subheader("🔍 Fuzzy Matched Modules (from missing data to DB)")
-        st.dataframe(match_results.sort_values("Match Score", ascending=False), use_container_width=True)
+        if not match_results.empty:
+                styled_results = match_results.style.background_gradient(
+                subset=['Similarity Score (%)'],
+                cmap='Blues'  # You can change to 'RdYlGn', 'coolwarm', etc.
+            ).format({'Similarity Score (%)': '{:.1f}%'})
+
+            st.dataframe(styled_results, use_container_width=True)
+        else:
+            st.info("No fuzzy matches found.")
+        
+#        st.subheader("🔍 Fuzzy Matched Modules (from missing data to DB)")
+#        st.dataframe(match_results.sort_values("Match Score", ascending=False), use_container_width=True)
 
     
     else:
