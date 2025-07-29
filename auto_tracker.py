@@ -41,7 +41,7 @@ def load_data():
     return pd.read_sql(query, engine)
 
 db = load_data()
-#st.dataframe(db)
+df['Tutor Student ID'] = df['Tutor Student ID'].apply(lambda x: str(int(float(x))) if pd.notnull(x) else x)
 
 st.markdown("""
 <style>
