@@ -36,7 +36,7 @@ engine = create_engine(db_url)
 # Query the data
 @st.cache_data
 def load_data():
-    query = "SELECT * FROM attendance_db_rwnt;"
+    query = "SELECT * FROM tutors;"
     return pd.read_sql(query, engine)
 
 db = load_data()
