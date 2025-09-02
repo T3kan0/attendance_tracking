@@ -28,7 +28,7 @@ db_port = st.secrets["DB_PORT"]
 db_name = st.secrets["DB_NAME"]
 
 # Build the SQLAlchemy connection URL
-db_url = f"postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
+db_url = f"postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}?sslmode=require"
 
 # Create the SQLAlchemy engine
 engine = create_engine(db_url)
