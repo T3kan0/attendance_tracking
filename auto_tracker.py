@@ -40,7 +40,7 @@ def load_data():
     return pd.read_sql(query, engine)
 
 db = load_data()
-db['Tutor Student ID'] = db['Tutor Student ID'].apply(lambda x: str(int(float(x))) if pd.notnull(x) else x)
+db['ID'] = db['ID'].apply(lambda x: str(int(float(x))) if pd.notnull(x) else x)
 
 st.markdown("""
 <style>
