@@ -18,7 +18,6 @@ from fuzzywuzzy import process
 from rapidfuzz import process, fuzz
 
 st.set_page_config(layout="wide")
-#st.markdown("![Alt Text](https://i.postimg.cc/zX2TGD2X/linegraph.png)")
 
 # Load credentials from Streamlit secrets
 db_user = st.secrets["DB_USER"]
