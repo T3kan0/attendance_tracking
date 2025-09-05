@@ -21,16 +21,19 @@ st.set_page_config(layout="wide")
 
 # Load credentials from Streamlit secrets
 
-db_url = st.secrets["SUPABASE_DB_URL"]
+USER = st.secrets["user"]
+PASSWORD = st.secrets["password"]
+HOST = st.secrets["host"]
+PORT = st.secrets["port"]
+DBNAME = st.secrets["dbname"]
 
 # Build the SQLAlchemy connection URL
+
+DATABASE_URL = f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?sslmode=require"
+
 # Create the SQLAlchemy engine
 
-engine = create_engine(
-    db_url,
-    connect_args={"sslmode": "require"},
-    pool_pre_ping=True
-)
+engine = create_engine(DATABASE_URL)
 
 # Query the data
 @st.cache_data
