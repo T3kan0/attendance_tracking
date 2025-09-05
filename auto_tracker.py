@@ -32,6 +32,7 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 response = supabase.table("tutors").select("*").execute()
 
 db = pd.DataFrame(response.data)
+print(db.columns) 
 
 st.markdown("""
 <style>
