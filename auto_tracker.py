@@ -20,17 +20,17 @@ from rapidfuzz import process, fuzz
 st.set_page_config(layout="wide")
 
 # Load credentials from Streamlit secrets
-db_user = st.secrets["DB_USER"]
-db_pass = st.secrets["DB_PASS"]
-db_host = st.secrets["DB_HOST"]
-db_port = st.secrets["DB_PORT"]
-db_name = st.secrets["DB_NAME"]
+
+db_url = st.secrets["SUPABASE_DB_URL"]
 
 # Build the SQLAlchemy connection URL
-db_url = f"postgresql+psycopg2://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}?sslmode=require"
-
 # Create the SQLAlchemy engine
-engine = create_engine(db_url)
+
+engine = create_engine(
+    db_url,
+    connect_args={"sslmode": "require"},
+    pool_pre_ping=True
+)
 
 # Query the data
 @st.cache_data
