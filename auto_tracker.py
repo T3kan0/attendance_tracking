@@ -379,7 +379,7 @@ if df1_file and df2_file:
             return pd.DataFrame(results)
 
         match_results = fuzzy_match_modules(df1_not_in_df2, db)
-        st.subheader("🔍 Fuzzy Matched Modules (from missing data to DB)")
+        st.markdown("<h3 style='text-align: center; color: #2471a3;'>🔍 Fuzzy Matched Modules (from missing data to DB)</h3>", unsafe_allow_html=True)
         st.dataframe(
             match_results.sort_values("Match Score", ascending=False)
             .style.format({"Match Score": "{:.2f}%"})
