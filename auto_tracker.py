@@ -22,8 +22,8 @@ st.set_page_config(layout="wide")
 
 # Load credentials from Streamlit secrets
 
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+SUPABASE_URL = st.secrets("SUPABASE_URL")
+SUPABASE_KEY = st.secrets("SUPABASE_KEY")
 
 # Initialize Supabase client
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
