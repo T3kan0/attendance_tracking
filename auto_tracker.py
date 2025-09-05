@@ -29,8 +29,9 @@ SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Example: fetch from "students" table
-db = supabase.table("tutors").select("*").execute()
+response = supabase.table("tutors").select("*").execute()
 
+db = pd.DataFrame(response.data)
 
 st.markdown("""
 <style>
