@@ -30,9 +30,10 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Example: fetch from "students" table
 response = supabase.table("tutors").select("*").execute()
+st.write(response)
 
 db = pd.DataFrame(response.data)
-print(db.columns) 
+#print(db.columns) 
 
 st.markdown("""
 <style>
