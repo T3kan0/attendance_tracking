@@ -31,14 +31,6 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 # Example: fetch from "students" table
 db = supabase.table("tutors").select("*").execute()
 
-# Query the data
-#@st.cache_data
-#def load_data():
- #   query = "SELECT * FROM tutors;"
- #   return pd.read_sql(query, engine)
-
-#db = load_data()
-#db['tutor_id'] = db['tutor_id'].astype("Int64").astype(str)
 
 st.markdown("""
 <style>
@@ -359,7 +351,7 @@ if df1_file and df2_file:
         @st.cache_data
         def fuzzy_match_modules(missing_df, reference_df, threshold=80):
             missing_modules = missing_df['Module Code'].dropna().unique()
-            reference_modules = reference_df['Module Code'].dropna().unique()
+            reference_modules = reference_df['module_id'].dropna().unique()
 
             results = []
 
@@ -398,7 +390,7 @@ if df1_file and df2_file:
         def fuzzy_match_tutor_ids(df_missing, db):
             results = []
 
-            db_ids = db['Tutor Student ID'].astype(str).dropna().unique()
+            db_ids = db['tutor_id'].astype(str).dropna().unique()
 
             for tutor_id in df_missing['TUTOR EMPLID'].dropna().astype(str).unique():
                 match, score, _ = process.extractOne(
