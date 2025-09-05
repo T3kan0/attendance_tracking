@@ -351,7 +351,7 @@ if df1_file and df2_file:
         @st.cache_data
         def fuzzy_match_modules(missing_df, reference_df, threshold=80):
             missing_modules = missing_df['Module Code'].dropna().unique()
-            reference_modules = reference_df['Module Code'].dropna().unique()
+            reference_modules = reference_df['module_id'].dropna().unique()
 
             results = []
 
