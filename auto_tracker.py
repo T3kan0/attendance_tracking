@@ -22,28 +22,23 @@ st.set_page_config(layout="wide")
 
 # Load credentials from Streamlit secrets
 
-USER = st.secrets["user"]
-PASSWORD = st.secrets["password"]
-HOST = st.secrets["host"]
-PORT = st.secrets["port"]
-DBNAME = st.secrets["dbname"]
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
-# Build the SQLAlchemy connection URL
+# Initialize Supabase client
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-DATABASE_URL = f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}?sslmode=require"
-
-# Create the SQLAlchemy engine
-
-engine = create_engine(DATABASE_URL)
+# Example: fetch from "students" table
+response = supabase.table("tutors").select("*").execute()
 
 # Query the data
-@st.cache_data
-def load_data():
-    query = "SELECT * FROM tutors;"
-    return pd.read_sql(query, engine)
+#@st.cache_data
+#def load_data():
+ #   query = "SELECT * FROM tutors;"
+ #   return pd.read_sql(query, engine)
 
-db = load_data()
-db['tutor_id'] = db['tutor_id'].astype("Int64").astype(str)
+#db = load_data()
+#db['tutor_id'] = db['tutor_id'].astype("Int64").astype(str)
 
 st.markdown("""
 <style>
