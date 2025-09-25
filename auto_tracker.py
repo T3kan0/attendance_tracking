@@ -43,7 +43,7 @@ db = pd.DataFrame(response1.data)
 #response2 = supabase2.table("sessions").select("*").execute()
 # Filter: only rows where Tutorial Date >= July 1, 2025
 response2 = (
-    supabase2.table("tutorial_attendance")
+    supabase2.table("sessions")
     .select("*")
     .gte("Tutorial Date", "2025-07-01")  # YYYY-MM-DD format
     .execute()
