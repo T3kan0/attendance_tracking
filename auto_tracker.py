@@ -40,7 +40,16 @@ response1 = supabase1.table("tutors").select("*").execute()
 db = pd.DataFrame(response1.data)
 
 # Query sessions table from the second DB
-response2 = supabase2.table("sessions").select("*").execute()
+#response2 = supabase2.table("sessions").select("*").execute()
+# Filter: only rows where Tutorial Date >= July 1, 2025
+response2 = (
+    supabase2.table("tutorial_attendance")
+    .select("*")
+    .gte("Tutorial Date", "2025-07-01")  # YYYY-MM-DD format
+    .execute()
+)
+
+
 attendance_df = pd.DataFrame(response2.data)
 st.write("Attendance Table", attendance_df)
 
