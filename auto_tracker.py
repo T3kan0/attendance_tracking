@@ -44,8 +44,8 @@ start_date_str = start_date.strftime("%Y-%m-%d")
 end_date_str = end_date.strftime("%Y-%m-%d")
 
 # User selects Faculty and Campus
-faculty_choice = st.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
-campus_choice = st.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
+faculty_choice = st.sidebar.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
+campus_choice = st.sidebar.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
 
 
 # fetch from "tutors" table
