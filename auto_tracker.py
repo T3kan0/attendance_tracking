@@ -42,6 +42,8 @@ db = pd.DataFrame(response1.data)
 # Query sessions table from the second DB
 response2 = supabase2.table("sessions").select("*").execute()
 attendance_df = pd.DataFrame(response2.data)
+st.write("Attendance Table", attendance_df)
+
 
 st.markdown("""
 <style>
