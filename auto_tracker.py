@@ -46,7 +46,7 @@ response2 = (
     supabase2.table("sessions")
     .select("*")
     .gte("Tutorial Date", "2025-07-01")
-    .order("Tutorial Date", {"ascending": True})  # correct format
+    .order("Tutorial Date")  # correct format
     .range(0, 4999)
     .execute()
 )
