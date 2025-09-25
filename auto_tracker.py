@@ -45,10 +45,10 @@ db = pd.DataFrame(response1.data)
 response2 = (
     supabase2.table("sessions")
     .select("*")
-    .gte("Tutorial Date", "2025-07-01")  # YYYY-MM-DD format
+    .gte("Tutorial Date", "2025-07-01")
+    .range(0, 4999)
     .execute()
 )
-
 
 attendance_df = pd.DataFrame(response2.data)
 st.write("Attendance Table", attendance_df)
