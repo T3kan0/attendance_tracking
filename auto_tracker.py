@@ -58,7 +58,6 @@ if campus_choice != "All":
     query = query.eq("Campus", campus_choice)
 
 
-
 # fetch from "tutors" table
 response1 = supabase1.table("tutors").select("*").execute()
 db = pd.DataFrame(response1.data)
@@ -68,7 +67,6 @@ db = pd.DataFrame(response1.data)
 response2 = query.order("Tutorial Date").range(0, 4999).execute()
 
 attendance_df = pd.DataFrame(response2.data)
-st.write("Attendance Table", attendance_df)
 
 st.markdown("""
 <style>
