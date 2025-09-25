@@ -37,12 +37,10 @@ supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 # fetch from "tutors" table
 response1 = supabase1.table("tutors").select("*").execute()
 db = pd.DataFrame(response1.data)
-#st.write("tutor_dbs", db)
 
 # Query sessions table from the second DB
 response2 = supabase2.table("sessions").select("*").execute()
 attendance_df = pd.DataFrame(response2.data)
-st.write("Attendance Table", attendance_df)
 
 
 st.markdown("""
@@ -150,9 +148,9 @@ with c2:
     df2_file = st.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
 
-if df1_file and df2_file:
+if df1_file:
     df1 = pd.read_csv(df1_file)
-    df2 = pd.read_csv(df2_file)
+    df2 = attendance_df
     
     # Make unfiltered copies for metrics
     df1_original = df1.copy()
