@@ -43,6 +43,9 @@ end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime("2025-0
 start_date_str = start_date.strftime("%Y-%m-%d")
 end_date_str = end_date.strftime("%Y-%m-%d")
 
+# User selects Faculty and Campus
+faculty_choice = st.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
+campus_choice = st.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
 
 
 # fetch from "tutors" table
