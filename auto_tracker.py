@@ -147,12 +147,12 @@ if df1_file:
     faculty_options = ["All Faculties"] + sorted(all_faculties)
 
     # Dropdown filter
-    selected_faculty = st.sidebar.selectbox("🎓 Filter by Faculty (optional):", faculty_options)
+    #selected_faculty = st.sidebar.selectbox("🎓 Filter by Faculty (optional):", faculty_options)
 
     # Apply filter only if a specific faculty is selected
-    if selected_faculty != "All Faculties":
-        df1 = df1[df1['FACULTY'] == selected_faculty]
-        df2 = df2[df2['Acad Group'] == selected_faculty]
+    #if selected_faculty != "All Faculties":
+        #df1 = df1[df1['FACULTY'] == selected_faculty]
+        #df2 = df2[df2['Acad Group'] == selected_faculty]
 
 
     def convert_date_format(df1: pd.DataFrame) -> pd.DataFrame:
@@ -308,7 +308,6 @@ if df1_file:
 
    
     # ZERO DB ATTENDANCE
-    #st.subheader("❌ Dates with No Database Records")
     # Header
     st.markdown("<h3 style='text-align: center; color: #2471a3;'>❌ Dates with No Database Records</h3>", unsafe_allow_html=True)
 
@@ -346,9 +345,9 @@ if df1_file:
     df1_not_in_df2 = df1_not_in_df2[df1.columns]
 
     # --- Display the result ---
-    print("DataFrame 1 (df1):\n", df1)
-    print("\nDataFrame 2 (df2):\n", df2)
-    print("\nEntries in df1 that are NOT in df2 (df1_not_in_df2):\n", df1_not_in_df2)
+    #print("DataFrame 1 (df1):\n", df1)
+    #print("\nDataFrame 2 (df2):\n", df2)
+    #print("\nEntries in df1 that are NOT in df2 (df1_not_in_df2):\n", df1_not_in_df2)
     if not df1_not_in_df2.empty:
         st.dataframe(df1_not_in_df2, use_container_width=True)
         df1_not_in_df2['Module Code'] = df1_not_in_df2['MODULE'].astype(str).str.strip() + df1_not_in_df2['CODE'].astype(str).str.strip()
