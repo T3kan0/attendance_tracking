@@ -47,21 +47,25 @@ end_date_str = end_date.strftime("%Y-%m-%d")
 faculty_choice = st.sidebar.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
 campus_choice = st.sidebar.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
 
+# Build query
+query = supabase2.table("sessions").select("*")
+query = query.gte("Tutorial Date", start_date_str).lte("Tutorial Date", end_date_str)
+
+if faculty_choice != "All":
+    query = query.eq("Faculty", faculty_choice)
+
+if campus_choice != "All":
+    query = query.eq("Campus", campus_choice)
+
+
 
 # fetch from "tutors" table
 response1 = supabase1.table("tutors").select("*").execute()
 db = pd.DataFrame(response1.data)
 
 # Query Supabase with date range
-response2 = (
-    supabase2.table("sessions")
-    .select("*")
-    .gte("Tutorial Date", start_date_str)
-    .lte("Tutorial Date", end_date_str)
-    .order("Tutorial Date")
-    .execute()
-)
-
+# Apply ordering and range
+response2 = query.order("Tutorial Date").range(0, 4999).execute()
 
 attendance_df = pd.DataFrame(response2.data)
 st.write("Attendance Table", attendance_df)
