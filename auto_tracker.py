@@ -21,6 +21,13 @@ from datetime import date
 
 st.set_page_config(layout="wide")
 
+
+# Date inputs for user
+start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime("2025-09-01"))
+end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime("2025-09-07"))
+
+
+
 # Load credentials from Streamlit secrets
 
 SUPABASE_URL1 = st.secrets["tutor"]["SUPABASE_URL1"]
