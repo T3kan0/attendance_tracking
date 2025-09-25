@@ -52,7 +52,7 @@ query = supabase2.table("sessions").select("*")
 query = query.gte("Tutorial Date", start_date_str).lte("Tutorial Date", end_date_str)
 
 if faculty_choice != "All":
-    query = query.eq("Faculty", faculty_choice)
+    query = query.eq("Acad Group", faculty_choice)
 
 if campus_choice != "All":
     query = query.eq("Campus", campus_choice)
