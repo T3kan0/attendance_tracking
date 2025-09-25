@@ -46,7 +46,8 @@ response2 = (
     supabase2.table("sessions")
     .select("*")
     .gte("Tutorial Date", "2025-07-01")
-    .range(0, 4999)
+    .order("Tutorial Date", ascending=True)  # important for .range()
+    .range(0, 4999)  # fetch first 5000 rows
     .execute()
 )
 
