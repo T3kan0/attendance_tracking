@@ -35,7 +35,7 @@ supabase1: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 supabase2: Client = create_client(supabase_url, supabase_key)
 
 # fetch from "tutors" table
-response1 = supabase.table("tutors").select("*").execute()
+response1 = supabase1.table("tutors").select("*").execute()
 db = pd.DataFrame(response1.data)
 
 
