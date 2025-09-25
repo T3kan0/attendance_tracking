@@ -45,7 +45,7 @@ db = pd.DataFrame(response1.data)
 response2 = (
     supabase2.table("sessions")
     .select("*")
-    .gte("Tutorial Date", "2025-07-01")  # YYYY-MM-DD format
+    .gte("Tutorial Date", "2025-09-01")  # YYYY-MM-DD format
     .execute()
 )
 
