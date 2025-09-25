@@ -24,6 +24,9 @@ st.set_page_config(layout="wide")
 
 SUPABASE_URL = st.secrets["SUPABASE_URL"]
 SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
+supabase_url = st.secrets["supabase_url"]
+supabase_key = st.secrets["supabase_key"]
+
 
 # Initialize Supabase client
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
