@@ -22,12 +22,6 @@ from datetime import date
 st.set_page_config(layout="wide")
 
 
-# Date inputs for user
-start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime("2025-09-01"))
-end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime("2025-09-07"))
-
-
-
 # Load credentials from Streamlit secrets
 
 SUPABASE_URL1 = st.secrets["tutor"]["SUPABASE_URL1"]
@@ -35,12 +29,21 @@ SUPABASE_KEY1 = st.secrets["tutor"]["SUPABASE_KEY1"]
 SUPABASE_URL2 = st.secrets["sessions"]["SUPABASE_URL2"]
 SUPABASE_KEY2 = st.secrets["sessions"]["SUPABASE_KEY2"]
 
-
 # Initialize Supabase client
 supabase1: Client = create_client(SUPABASE_URL1, SUPABASE_KEY1)
 
 # Client 2 (lowercase keys)
 supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
+
+# Date inputs for user
+start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime("2025-09-01"))
+end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime("2025-09-07"))
+
+# Convert dates to string format Supabase accepts
+start_date_str = start_date.strftime("%Y-%m-%d")
+end_date_str = end_date.strftime("%Y-%m-%d")
+
+
 
 # fetch from "tutors" table
 response1 = supabase1.table("tutors").select("*").execute()
