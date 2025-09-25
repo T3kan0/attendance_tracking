@@ -128,50 +128,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Sidebar file upload
-st.sidebar.markdown("""
-<style>
-.sidebar-header {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-left: 8px solid purple;
-    border-radius: 5px;
-    box-shadow: 0 5px 9px rgba(0,0,0,0.1);
-}
-.sidebar-header h2 {
-    font-size: 16px;
-    color: purple;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-.sidebar-header h3 span {
-    margin-right: 8px;
-}
-.sidebar-header p {
-    font-size: 13px;
-    color: #555;
-    margin-top: 5px;
-    margin-bottom: 0;
-}
-</style>
-
-<div class="sidebar-header">
-    <h2>A_STEP Data Engineering</h2> 
-</div>
-""", unsafe_allow_html=True)
-
 c1, c2 = st.columns(2)
 
-with c1:
-    st.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
-    df1_file = st.file_uploader("", type=["csv"], label_visibility="collapsed")
 
-with c2:
-    st.markdown("<h6 style='text-align: center; color: #800080;'> PeopleSoft Data (df2) </h6>", unsafe_allow_html=True)    
-    df2_file = st.file_uploader(" ", type=["csv"], label_visibility="collapsed")
-
+st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
+df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
 if df1_file:
     df1 = pd.read_csv(df1_file)
