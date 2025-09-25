@@ -67,6 +67,7 @@ db = pd.DataFrame(response1.data)
 response2 = query.order("Tutorial Date").range(0, 4999).execute()
 
 attendance_df = pd.DataFrame(response2.data)
+st.write("Attendance Table (Latest Term)", attendance_df)
 
 st.markdown("""
 <style>
