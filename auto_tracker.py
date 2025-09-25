@@ -37,7 +37,7 @@ supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 # fetch from "tutors" table
 response1 = supabase1.table("tutors").select("*").execute()
 db = pd.DataFrame(response1.data)
-st.write("Attendance Table", db)
+st.write("tutor_dbs", db)
 
 # Query sessions table from the second DB
 response2 = supabase2.table("sessions").select("*").execute()
