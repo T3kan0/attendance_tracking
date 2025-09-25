@@ -29,11 +29,19 @@ supabase_key = st.secrets["supabase_key"]
 
 
 # Initialize Supabase client
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+supabase1: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+# Client 2 (lowercase keys)
+supabase2: Client = create_client(supabase_url, supabase_key)
 
 # fetch from "tutors" table
-response = supabase.table("tutors").select("*").execute()
-db = pd.DataFrame(response.data)
+response1 = supabase.table("tutors").select("*").execute()
+db = pd.DataFrame(response1.data)
+
+
+# Query sessions table from the second DB
+response2 = supabase2.table("sessions").select("*").execute()
+attendance_df = pd.DataFrame(response2.data)
 
 st.markdown("""
 <style>
