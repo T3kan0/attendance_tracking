@@ -22,10 +22,10 @@ st.set_page_config(layout="wide")
 
 # Load credentials from Streamlit secrets
 
-SUPABASE_URL = st.secrets["SUPABASE_URL"]
-SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
-supabase_url = st.secrets["supabase_url"]
-supabase_key = st.secrets["supabase_key"]
+SUPABASE_URL = st.secrets["tutor"]["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["tutor"]["SUPABASE_KEY"]
+supabase_url = st.secrets["sessions"]["supabase_url"]
+supabase_key = st.secrets["sessions"]["supabase_key"]
 
 
 # Initialize Supabase client
