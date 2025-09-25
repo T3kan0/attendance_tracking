@@ -17,6 +17,7 @@ from rapidfuzz import process
 from fuzzywuzzy import process
 from rapidfuzz import process, fuzz
 from supabase import create_client, Client
+from datetime import date
 
 st.set_page_config(layout="wide")
 
