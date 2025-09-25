@@ -357,7 +357,7 @@ if df1_file:
     'left_on': ['TUTOR EMPLID', 'DATE', 'CAMPUS', 'TERM'],
     'right_on': ['ID', 'Tutorial Date', 'Campus', 'Term']
     }
-    df2["TUTOR EMPLID"] = df2["TUTOR EMPLID"].astype(str)
+    df2["ID"] = df2["ID"].astype(str)
     df3["TUTOR EMPLID"] = df3["TUTOR EMPLID"].astype(str)
     # --- Perform a left merge ---
     # A left merge keeps all rows from df1 and adds matching columns from df2.
