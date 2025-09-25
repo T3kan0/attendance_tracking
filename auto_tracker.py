@@ -148,9 +148,9 @@ with c2:
     df2_file = st.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
 
-if df1_file and df2_file:
+if df1_file:
     df1 = pd.read_csv(df1_file)
-    df2 = pd.read_csv(df2_file)
+    df2 = attendance_df
     
     # Make unfiltered copies for metrics
     df1_original = df1.copy()
