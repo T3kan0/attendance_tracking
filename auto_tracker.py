@@ -232,7 +232,8 @@ if df1_file:
     print(df3['DATE'].unique())
     #df1['DATE'] = pd.to_datetime(df1['DATE'], errors='coerce')
     df2['Tutorial Date'] = pd.to_datetime(df2['Tutorial Date'], errors='coerce')
-
+    print(df2['Tutorial Date'].unique())
+    
     # Parse df1 dates and show warning if any fail
     #df1['DATE'] = pd.to_datetime(df1['DATE'], errors='coerce')
     num_failed_df1 = df3['DATE'].isna().sum()
