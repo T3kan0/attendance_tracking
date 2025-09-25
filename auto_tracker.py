@@ -29,10 +29,10 @@ SUPABASE_KEY2 = st.secrets["sessions"]["SUPABASE_KEY2"]
 
 
 # Initialize Supabase client
-supabase1: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+supabase1: Client = create_client(SUPABASE_URL1, SUPABASE_KEY1)
 
 # Client 2 (lowercase keys)
-supabase2: Client = create_client(supabase_url, supabase_key)
+supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 
 # fetch from "tutors" table
 response1 = supabase1.table("tutors").select("*").execute()
