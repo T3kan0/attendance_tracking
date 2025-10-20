@@ -48,8 +48,8 @@ if date_range.data:
 
 
     # Date inputs for user
-    start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime({min_date}))
-    end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime({max_date}))
+    start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime(min_date))
+    end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime(max_date))
 
     # Convert dates to string format Supabase accepts
     start_date_str = start_date.strftime("%Y-%m-%d")
