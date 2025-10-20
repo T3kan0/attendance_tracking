@@ -39,7 +39,7 @@ supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 st.markdown("""
 <style>
 .ingestion-header {
-    background: linear-gradient(to right, #6a0572, #ab83a1);
+    background: linear-gradient(to right, #253551, #ab83a1);
     padding: 25px 20px;
     border-radius: 12px;
     border: 2px solid red;
