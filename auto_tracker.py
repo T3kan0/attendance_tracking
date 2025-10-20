@@ -113,7 +113,12 @@ st.sidebar.markdown(
 st.sidebar.info(f" 🗓️ Database Date Range")
 st.sidebar.write(f"📅 Start Date: **{min_date}**")
 st.sidebar.write(f"📅 End Date: **{max_date}**")
-st.sidebar.markdown('---')
+st.sidebar.markdown(
+    """
+    <hr style="height:4px; border:none; background-color:#007BFF; margin:10px 0;">
+    """,
+    unsafe_allow_html=True
+)
 
 # Date inputs for user
 start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime(min_date))
