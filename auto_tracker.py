@@ -35,6 +35,10 @@ supabase1: Client = create_client(SUPABASE_URL1, SUPABASE_KEY1)
 # Client 2 (lowercase keys)
 supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 
+# --- Get full date range from Supabase (only once)
+date_range = supabase2.table("sessions").select("Tutorial Date").execute()
+
+
 # Date inputs for user
 start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime("2025-09-01"))
 end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime("2025-09-07"))
