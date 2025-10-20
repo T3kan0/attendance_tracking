@@ -36,6 +36,9 @@ supabase1: Client = create_client(SUPABASE_URL1, SUPABASE_KEY1)
 supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 
 
+
+
+
 st.markdown("""
 <style>
 .ingestion-header {
@@ -95,11 +98,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
-df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
-
-
-
 
 # --- Get full date range from Supabase (only once)
 date_range = supabase2.table("sessions").select('"Tutorial Date"').execute()
@@ -124,6 +122,9 @@ if date_range.data:
     # User selects Faculty and Campus
     faculty_choice = st.sidebar.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
     campus_choice = st.sidebar.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
+    
+    st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
+    df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
     # --- Validate user selection
     if start_date_str < str(min_date) or end_date_str > str(max_date):
