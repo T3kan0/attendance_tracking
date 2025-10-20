@@ -36,9 +36,6 @@ supabase1: Client = create_client(SUPABASE_URL1, SUPABASE_KEY1)
 supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 
 
-
-
-
 st.markdown("""
 <style>
 .ingestion-header {
