@@ -138,7 +138,7 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )    
 #st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
-df1_file = st.sidebar.file_uploader(":red[Upload Here]", type=["csv"], label_visibility="collapsed")
+df1_file = st.sidebar.file_uploader(" ", type=["csv"], label_visibility="collapsed")
 
 # --- Validate user selection
 if start_date_str < str(min_date) or end_date_str > str(max_date):
