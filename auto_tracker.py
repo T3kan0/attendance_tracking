@@ -37,6 +37,12 @@ supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 
 # --- Get full date range from Supabase (only once)
 date_range = supabase2.table("sessions").select("Tutorial Date")
+if date_range.data:
+    all_dates = [row["Tutorial Date"] for row in date_range.data if row["Tutorial Date"]]
+    min_date = min(all_dates)
+    max_date = max(all_dates)
+
+    st.write(f"📅 Available data range: **{min_date} → {max_date}**")
 
 
 # Date inputs for user
