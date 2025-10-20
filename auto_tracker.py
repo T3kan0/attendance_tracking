@@ -43,6 +43,10 @@ if date_range.data:
     max_date = max(all_dates)
 
     st.sidebar.write(f"📅 Available data range: **{min_date} → {max_date}**")
+    st.sidebar.write(f"📅 Start Date: **{min_date}**")
+    st.sidebar.write(f"📅 End Date: **{max_date}**")
+
+
 
 
 # Date inputs for user
