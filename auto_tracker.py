@@ -101,42 +101,42 @@ st.markdown("""
 
 # --- Get full date range from Supabase (only once)
 date_range = supabase2.table("sessions").select('"Tutorial Date"').execute()
-if date_range.data:
-    all_dates = [row["Tutorial Date"] for row in date_range.data if row["Tutorial Date"]]
-    min_date = min(all_dates)
-    max_date = max(all_dates)
 
-    st.sidebar.write(f"Database Date Range:")
-    st.sidebar.write(f"📅 Start Date: **{min_date}**")
-    st.sidebar.write(f"📅 End Date: **{max_date}**")
+all_dates = [row["Tutorial Date"] for row in date_range.data if row["Tutorial Date"]]
+min_date = min(all_dates)
+max_date = max(all_dates)
+
+st.sidebar.write(f"Database Date Range:")
+st.sidebar.write(f"📅 Start Date: **{min_date}**")
+st.sidebar.write(f"📅 End Date: **{max_date}**")
 
 
-    # Date inputs for user
-    start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime(min_date))
-    end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime(max_date))
+# Date inputs for user
+start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime(min_date))
+end_date = st.sidebar.date_input("Select end date", value=pd.to_datetime(max_date))
 
-    # Convert dates to string format Supabase accepts
-    start_date_str = start_date.strftime("%Y-%m-%d")
-    end_date_str = end_date.strftime("%Y-%m-%d")
+# Convert dates to string format Supabase accepts
+start_date_str = start_date.strftime("%Y-%m-%d")
+end_date_str = end_date.strftime("%Y-%m-%d")
 
-    # User selects Faculty and Campus
-    faculty_choice = st.sidebar.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
-    campus_choice = st.sidebar.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
+# User selects Faculty and Campus
+faculty_choice = st.sidebar.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
+campus_choice = st.sidebar.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
     
-    st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
-    df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
+st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
+df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
 
-    # --- Validate user selection
-    if start_date_str < str(min_date) or end_date_str > str(max_date):
-        st.warning(f"⚠️ Selected range is outside available data ({min_date} → {max_date})")
-    elif start_date_str > end_date_str:
-        st.error("❌ Start date cannot be after end date")
-    else:
-        # --- Safe to query
-        query = supabase2.table("sessions").select("*") \
-            .gte("Tutorial Date", start_date_str) \
-            .lte("Tutorial Date", end_date_str)
-        data = query.execute()
+# --- Validate user selection
+if start_date_str < str(min_date) or end_date_str > str(max_date):
+    st.warning(f"⚠️ Selected range is outside available data ({min_date} → {max_date})")
+elif start_date_str > end_date_str:
+    st.error("❌ Start date cannot be after end date")
+else:
+    # --- Safe to query
+    query = supabase2.table("sessions").select("*") \
+        .gte("Tutorial Date", start_date_str) \
+        .lte("Tutorial Date", end_date_str)
+    data = query.execute()
 
 
     if faculty_choice != "All":
