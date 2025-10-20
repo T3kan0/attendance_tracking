@@ -104,7 +104,7 @@ min_date = min(all_dates)
 max_date = max(all_dates)
 st.sidebar.markdown(
     """
-    <div style="color:#007BFF; font-weight:bold; font-size:2.5rem; text-align:center;">
+    <div style="color:#007BFF; font-weight:bold; font-size:1.5rem; text-align:center;">
         ⎯⎯⎯⎯⎯
     </div>
     """,
