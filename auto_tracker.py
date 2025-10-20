@@ -155,7 +155,7 @@ else:
 
 
 
-if df1_file and end_date_str <= str(max_date):
+if df1_file and end_date_str <= str(max_date) or start_date_str <= end_date_str:
     st.sidebar.success('File Uploaded Successfully!')
     df1 = pd.read_csv(df1_file)
     df2 = attendance_df
@@ -447,5 +447,3 @@ if df1_file and end_date_str <= str(max_date):
 
     else:
         st.success("✅ All records in df1 exist in df2.")
-elif df1_file and start_date_str > end_date_str:
-    st.error("❌ Start date cannot be after end date")
