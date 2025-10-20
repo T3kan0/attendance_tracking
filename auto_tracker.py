@@ -156,7 +156,7 @@ else:
     #c1, c2 = st.columns(2)
 
 
-if df1_file:
+if df1_file and end_date_str <= str(max_date):
     st.sidebar.success('File Uploaded Successfully!')
     df1 = pd.read_csv(df1_file)
     df2 = attendance_df
