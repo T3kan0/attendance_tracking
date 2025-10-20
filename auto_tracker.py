@@ -110,6 +110,7 @@ st.sidebar.markdown(
     """,
     unsafe_allow_html=True
 )
+st.sidebar.write('')
 st.sidebar.info(f" 🗓️ Database Date Range")
 st.sidebar.write(f"📅 Start Date: **{min_date}**")
 st.sidebar.write(f"📅 End Date: **{max_date}**")
