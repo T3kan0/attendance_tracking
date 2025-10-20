@@ -42,7 +42,7 @@ st.markdown("""
     background: linear-gradient(to right, #253551, #ab83a1);
     padding: 25px 20px;
     border-radius: 12px;
-    border: 2px solid red;
+    border: 2px solid blue;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     color: white;
     margin-bottom: 30px;
