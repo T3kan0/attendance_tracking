@@ -36,7 +36,7 @@ supabase1: Client = create_client(SUPABASE_URL1, SUPABASE_KEY1)
 supabase2: Client = create_client(SUPABASE_URL2, SUPABASE_KEY2)
 
 # --- Get full date range from Supabase (only once)
-date_range = supabase2.table("sessions").select("Tutorial Date").execute()
+date_range = supabase2.table("sessions").select('"Tutorial Date"').execute()
 if date_range.data:
     all_dates = [row["Tutorial Date"] for row in date_range.data if row["Tutorial Date"]]
     min_date = min(all_dates)
