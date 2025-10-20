@@ -159,6 +159,7 @@ else:
 
 
 if df1_file:
+    st.sidebar.success('File Uploaded Successfully!')
     df1 = pd.read_csv(df1_file)
     df2 = attendance_df
     
