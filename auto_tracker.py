@@ -125,7 +125,7 @@ df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapse
 
 # --- Validate user selection
 if start_date_str < str(min_date) or end_date_str > str(max_date):
-    st.warning(f"⚠️ Selected range is outside available data ({min_date} → {max_date})")
+    st.warning(f"⚠️ Selected range is outside the available data ({min_date} → {max_date})")
 elif start_date_str > end_date_str:
     st.error("❌ Start date cannot be after end date")
 else:
@@ -153,7 +153,6 @@ else:
 
     attendance_df = pd.DataFrame(response2.data)
 
-    #c1, c2 = st.columns(2)
 
 
 if df1_file and end_date_str <= str(max_date):
