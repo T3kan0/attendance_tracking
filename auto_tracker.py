@@ -131,9 +131,14 @@ end_date_str = end_date.strftime("%Y-%m-%d")
 # User selects Faculty and Campus
 faculty_choice = st.sidebar.selectbox("Select Faculty", ["All", "MEMS", "MHSC", "MTHL", "MNAS", "MHUM", "MLAW", "MEDU"])
 campus_choice = st.sidebar.selectbox("Select Campus", ["All", "MAIN", "QWA", "SOUTH"])
-    
-st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
-df1_file = st.sidebar.file_uploader("", type=["csv"], label_visibility="collapsed")
+st.sidebar.markdown(
+    """
+    <hr style="height:4px; border:none; background-color:#007BFF; margin:10px 0;">
+    """,
+    unsafe_allow_html=True
+)    
+#st.sidebar.markdown("<h6 style='text-align: center; color: #196f3d;'> OneDrive Data (df1) </h6>", unsafe_allow_html=True)
+df1_file = st.sidebar.file_uploader(":red[Upload Here]", type=["csv"], label_visibility="collapsed")
 
 # --- Validate user selection
 if start_date_str < str(min_date) or end_date_str > str(max_date):
