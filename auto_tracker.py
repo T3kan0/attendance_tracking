@@ -42,7 +42,7 @@ if date_range.data:
     min_date = min(all_dates)
     max_date = max(all_dates)
 
-    st.sidebar.title(f"Database Date Range:")
+    st.sidebar.write(f"Database Date Range:")
     st.sidebar.write(f"📅 Start Date: **{min_date}**")
     st.sidebar.write(f"📅 End Date: **{max_date}**")
 
