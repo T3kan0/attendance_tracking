@@ -106,7 +106,7 @@ max_date = max(all_dates)
 st.sidebar.warning(f" 🗓️ Database Date Range")
 st.sidebar.write(f"📅 Start Date: **{min_date}**")
 st.sidebar.write(f"📅 End Date: **{max_date}**")
-st.sidebar.markdown(--)
+st.sidebar.markdown('--')
 
 # Date inputs for user
 start_date = st.sidebar.date_input("Select start date", value=pd.to_datetime(min_date))
