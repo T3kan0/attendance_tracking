@@ -103,7 +103,7 @@ all_dates = [row["Tutorial Date"] for row in date_range.data if row["Tutorial Da
 min_date = min(all_dates)
 max_date = max(all_dates)
 
-st.sidebar.warning(f"Database Date Range:")
+st.sidebar.warning(f"Database Date Range:🚩")
 st.sidebar.write(f"📅 Start Date: **{min_date}**")
 st.sidebar.write(f"📅 End Date: **{max_date}**")
 
