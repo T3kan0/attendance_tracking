@@ -153,9 +153,7 @@ else:
 
     attendance_df = pd.DataFrame(response2.data)
 
-
-
-    c1, c2 = st.columns(2)
+    #c1, c2 = st.columns(2)
 
 
 if df1_file:
