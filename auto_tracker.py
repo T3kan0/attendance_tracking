@@ -21,7 +21,6 @@ from datetime import date
 
 st.set_page_config(layout="wide")
 
-
 # Load credentials from Streamlit secrets
 
 SUPABASE_URL1 = st.secrets["tutor"]["SUPABASE_URL1"]
