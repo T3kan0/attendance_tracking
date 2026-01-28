@@ -1,7 +1,6 @@
 pandas
 plotly
 python-dateutil
-streamlit
 matplotlib
 sqlalchemy
 psycopg2-binary
@@ -9,3 +8,5 @@ rapidfuzz
 fuzzywuzzy
 supabase
 altair==4.2.2
+Python 3.11
+streamlit==1.29.0
