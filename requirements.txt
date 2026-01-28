@@ -8,3 +8,4 @@ psycopg2-binary
 rapidfuzz
 fuzzywuzzy
 supabase
+altair==4.2.2
